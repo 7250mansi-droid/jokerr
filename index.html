@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Beautiful Story ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Twinkling stars in the background -->
+    <div id="bg-stars"></div>
+    
+    <!-- Floating hearts in the background -->
+    <div id="bg-hearts-container"></div>
+
+    <!-- Floating Music Controls -->
+    <button class="music-btn" id="floating-music-btn" onclick="toggleMusic()" aria-label="Toggle Music">
+        <!-- Default paused state SVG (Music note with slash or muted icon) -->
+        <svg viewBox="0 0 24 24">
+            <path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73l6 6 1.27-1.27L4.27 3zM10 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4-12h4V3h-6v5.18l2 2z"/>
+        </svg>
+    </button>
+
+    <!-- ==========================================
+         LANDING SCREEN
+         ========================================== -->
+    <section id="landing-screen">
+        <div class="landing-card">
+            <h1 class="landing-title" id="landing-question">Do you like me? ❤️</h1>
+            
+            <div class="button-group">
+                <button class="btn btn-yes" id="btn-yes" onclick="handleYesClick()">
+                    Yes 💖
+                </button>
+                <button class="btn btn-no" id="btn-no" onclick="handleNoClick()">
+                    No 😢
+                </button>
+                <button class="btn btn-ok-yes" id="btn-ok-yes" onclick="handleYesClick()">
+                    Okay fine... Yes ❤️
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         MAIN WEBSITE
+         ========================================== -->
+    <main id="main-website">
+        
+        <!-- Hero Section -->
+        <section class="main-hero" id="home">
+            <div class="hero-glass-card">
+                <!-- Highlight/Profile Photo -->
+                <div class="couple-photo-wrapper">
+                    <!-- PLACEHOLDER PHOTO 1 (Can be photo1.jpg or input_file_0.png) -->
+                    <!-- To replace: Place your photo in the same folder as this file and name it photo1.jpg -->
+                    <img src="photo1.jpg" alt="Us" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80'">
+                </div>
+                <h2 class="main-title">Our Beautiful Story ❤️</h2>
+                <p class="sub-title">For the most special girl in my life, <span class="girl-name-placeholder">Mansi</span></p>
+                
+                <div class="hero-scroll-indicator" onclick="document.getElementById('counter').scrollIntoView()">
+                    Scroll Down to Explore 💖
+                    <div style="font-size: 1.5rem; margin-top: 5px;">↓</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Counter Section -->
+        <section class="counter-section" id="counter">
+            <div class="counter-container">
+                <h3 class="counter-title">Days Since We Met ⏳</h3>
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <span class="counter-number" id="timer-days">00</span>
+                        <span class="counter-label">Days</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" id="timer-hours">00</span>
+                        <span class="counter-label">Hours</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" id="timer-minutes">00</span>
+                        <span class="counter-label">Mins</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" id="timer-seconds">00</span>
+                        <span class="counter-label">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Memory Timeline Section -->
+        <section class="story-section" id="story">
+            <div class="story-glass-card">
+                <h3 class="story-section-title">The Chapters of Us 📖</h3>
+                
+                <!-- Timeline Book Pages -->
+                <div class="book-container">
+                    
+                    <!-- Page 1 -->
+                    <div class="book-page active">
+                        <h4 class="chapter-title">Chapter 1: The Unexpected Start 🌸</h4>
+                        <p class="chapter-text">
+                            I never expected my story with you to begin the way it did. You were the one who fell for me first, the one who confessed first, and the one who asked me out. At the time, I wasn't ready and I said no. But somehow, you convinced me to give us a chance. Later, when you felt that maybe I had only agreed because of pressure, you told me that being best friends was probably better for us.
+                        </p>
+                        <span class="book-page-num">Page 1</span>
+                    </div>
+
+                    <!-- Page 2 -->
+                    <div class="book-page">
+                        <h4 class="chapter-title">Chapter 2: Just Best Friends? 💕</h4>
+                        <p class="chapter-text">
+                            The funny thing is, even after deciding to be "just best friends," nothing ever really felt like friendship alone. The way we talked, cared for each other, and understood each other slowly changed everything. Without even realizing it, I became attached to you. Somewhere between our conversations, our laughter, and all the little moments we shared, I fell for you too.
+                        </p>
+                        <span class="book-page-num">Page 2</span>
+                    </div>
+
+                    <!-- Page 3 -->
+                    <div class="book-page">
+                        <h4 class="chapter-title">Chapter 3: The Courage to Ask 💖</h4>
+                        <p class="chapter-text">
+                            So when I finally gathered the courage to tell you how I felt and asked if we could date, and you said yes, it became one of the happiest moments of my life. Now, whenever my phone rings, a part of me hopes it's you. Every notification makes me wonder if you've sent a message. Talking to you has become one of the best parts of my day.
+                        </p>
+                        <span class="book-page-num">Page 3</span>
+                    </div>
+
+                    <!-- Page 4 -->
+                    <div class="book-page">
+                        <h4 class="chapter-title">Chapter 4: In Your Presence ✨</h4>
+                        <p class="chapter-text">
+                            Being with you feels different. There's a comfort, peace, and happiness that I can't really put into words. Whether we're talking, laughing, or simply spending time together, everything feels a little better when you're around. I don't need us to talk every second of every day. I just like knowing you're there. I like having you close. Sitting beside you, walking with you, and sharing random little moments are the things that make me happiest.
+                        </p>
+                        <span class="book-page-num">Page 4</span>
+                    </div>
+
+                    <!-- Page 5 -->
+                    <div class="book-page">
+                        <h4 class="chapter-title">Chapter 5: My Favorite Plot Twist 🌹</h4>
+                        <p class="chapter-text">
+                            You became the person I look forward to, the person who makes ordinary days feel special, and the person I want to keep making memories with. Out of all the unexpected things that have happened in my life, falling for my best friend has been my favorite. If someone had told me that the girl who once convinced me to date her would become the person I never want to lose, I probably wouldn't have believed them. But here we are, and honestly, I wouldn't change a single thing. ❤️
+                        </p>
+                        <span class="book-page-num">Page 5</span>
+                    </div>
+                </div>
+
+                <!-- Book Navigation Controls -->
+                <div class="book-controls">
+                    <button class="book-btn" id="book-prev-btn" onclick="changeBookPage(-1)" disabled aria-label="Previous Page">←</button>
+                    <span class="book-progress" id="book-progress">1 / 5</span>
+                    <button class="book-btn" id="book-next-btn" onclick="changeBookPage(1)" aria-label="Next Page">→</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poem Section -->
+        <section class="poem-section" id="poem">
+            <div class="poem-container">
+                <h3 class="poem-title">A Symphony of Us</h3>
+                <!-- Custom love poem space (20 lines) -->
+                <div class="poem-content">
+                    <div class="poem-line">From the very first day that our paths crossed by,</div>
+                    <div class="poem-line">Under the arch of the wide, blue sky,</div>
+                    <div class="poem-line">I never knew how my world would transform,</div>
+                    <div class="poem-line">How a simple hello could keep me so warm.</div>
+                    <div class="poem-line"></div>
+                    <div class="poem-line">We started as friends, laughing away,</div>
+                    <div class="poem-line">Sharing the moments that made up each day.</div>
+                    <div class="poem-line">But destiny whispered a different song,</div>
+                    <div class="poem-line">A melody where we both would belong.</div>
+                    <div class="poem-line"></div>
+                    <div class="poem-line">Your voice became music I longed to hear,</div>
+                    <div class="poem-line">Whispering softly and drawing me near.</div>
+                    <div class="poem-line">The smile on your face, the light in your eyes,</div>
+                    <div class="poem-line">Brighter than stars in the midnight skies.</div>
+                    <div class="poem-line"></div>
+                    <div class="poem-line">I fell for your kindness, I fell for your grace,</div>
+                    <div class="poem-line">Finding my home in your gentle embrace.</div>
+                    <div class="poem-line">No longer just friends, but something so deep,</div>
+                    <div class="poem-line">A beautiful promise I intend to keep.</div>
+                    <div class="poem-line"></div>
+                    <div class="poem-line">With every tomorrow and all that's in store,</div>
+                    <div class="poem-line">I know that I'll love you a little bit more.</div>
+                    <div class="poem-line">You are my anchor, my sunlight, my guide,</div>
+                    <div class="poem-line">My happiest place is right by your side. 💖</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Slideshow Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <h3 class="gallery-title">Moments Captured in Time 📸</h3>
+                
+                <div class="slideshow-wrapper">
+                    <!-- Floating heart overlay for gallery -->
+                    <div class="gallery-overlay-hearts" id="gallery-hearts"></div>
+                    
+                    <!-- Slides (Replace photo1.jpg - photo5.jpg with your own pictures) -->
+                    <!-- Fallbacks link to Unsplash romantic photos in case files are missing -->
+                    <div class="slide active">
+                        <img src="photo1.jpg" alt="Us 1" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=80'">
+                    </div>
+                    <div class="slide">
+                        <img src="photo2.jpg" alt="Us 2" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=80'">
+                    </div>
+                    <div class="slide">
+                        <img src="photo3.jpg" alt="Us 3" onerror="this.src='https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800&auto=format&fit=crop&q=80'">
+                    </div>
+                    <div class="slide">
+                        <img src="photo4.jpg" alt="Us 4" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=80'">
+                    </div>
+                    <div class="slide">
+                        <img src="photo5.jpg" alt="Us 5" onerror="this.src='https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=800&auto=format&fit=crop&q=80'">
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <button class="gallery-nav-btn gallery-prev" onclick="prevSlide()" aria-label="Previous Slide">❮</button>
+                    <button class="gallery-nav-btn gallery-next" onclick="nextSlide()" aria-label="Next Slide">❯</button>
+                    
+                    <!-- Indicators -->
+                    <div class="gallery-indicators" id="gallery-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surprise Popup Section -->
+        <section class="surprise-section" id="surprise">
+            <button class="surprise-btn" onclick="openSurpriseModal()">
+                Click for a surprise 🎁
+            </button>
+        </section>
+
+        <!-- Surprise Modal Window -->
+        <div class="modal-overlay" id="surprise-modal" onclick="closeSurpriseModal()">
+            <div class="modal-card" onclick="event.stopPropagation()">
+                <span class="modal-icon">🎁</span>
+                <h4 class="modal-title">A Message For You</h4>
+                <p class="modal-text" id="modal-text-content">Surprise message goes here...</p>
+                <button class="modal-close-btn" onclick="closeSurpriseModal()">Close ❤️</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p class="footer-text">Made with ❤️ for the most special girl in my life</p>
+            <p class="footer-subtext">&copy; 2026. Forever & Always.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
